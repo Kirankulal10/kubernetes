@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+
+metadata:
+  name: parallel-job
+  namespace: jobs
+spec:
+  completions: 5
+  parallelism: 3
+
+  template:
+    spec:
+      containers:
+      - name: demo-job
+        image: busybox
+        command: ["sh", "-c", "echo hello"]
+      restartPolicy: Never

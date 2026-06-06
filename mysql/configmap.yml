@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: mysql-namespace
+data:
+  MYSQL_DATABASE: "devops1 with secret"

@@ -1,0 +1,12 @@
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: apache-vpa
+  namespace: apache-namespace
+spec:
+  targetRef:                  #for what to create replica
+    apiVersion: apps/v1
+    kind: Deployment        #for deployment 
+    name: apache-deployment
+  updatePolicy:
+    updateMode: "Auto"
