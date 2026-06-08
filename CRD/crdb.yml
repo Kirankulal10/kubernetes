@@ -1,0 +1,8 @@
+apiVersion: trainwithkiran.com/v1
+kind: Database
+metadata:
+  name: mydb
+
+spec:
+  engine: mysql
+  version: "8.0"
